@@ -138,6 +138,9 @@ h6 {
     transform: rotate(360deg);
   }
 }
+.text-right {
+  text-align: right;
+}
 
 /* Pulsating Play Button
 ------------------------------*/
@@ -566,17 +569,17 @@ h6 {
 }
 
 .footer .footer-top {
-  padding-top: 50px;
+  padding-top: 30px;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .footer-about .logo {
   line-height: 1;
-  margin-bottom: 25px;
+/*  margin-bottom: 25px;*/
 }
 
 .footer .footer-about .logo img {
-  max-height: 40px;
+  max-height: 70px;
   margin-right: 6px;
 }
 
@@ -606,8 +609,8 @@ h6 {
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: #eb4079;
+  border-color: #eb4079;
 }
 
 .footer h4 {
@@ -618,7 +621,7 @@ h6 {
 }
 
 .footer .footer-links {
-  margin-bottom: 30px;
+/*  margin-bottom: 30px;*/
 }
 
 .footer .footer-links ul {
@@ -1665,7 +1668,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .team .member .social a:hover {
-  color: var(--accent-color);
+  color: #eb4079;
 }
 
 .team .member .social i {
@@ -1739,7 +1742,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .contact .php-email-form input[type=text]:focus,
 .contact .php-email-form input[type=email]:focus,
 .contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
+  border-color: #eb4079;
 }
 
 .contact .php-email-form input[type=text]::placeholder,
