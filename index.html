@@ -394,7 +394,7 @@
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team_profile.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/team/team_3.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Md. Ariful Islam</h4>
                 <span>General Manager,<br>Admin & Logistic</span>
@@ -459,10 +459,10 @@
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team_profile.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/team/team_4.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Md. Jahid Hasan</h4>
-                <span>Chief Marketing Officer (CMO)</span>
+                <span>Delivery Assistant</span>
                 <div class="social">
                   <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -476,10 +476,10 @@
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team_profile.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/team/team_5.png" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Md. Golam Al Sarowar</h4>
-                <span>Chief Human Resources Officer</span>
+                <h4>Md. Lavlu Mia</h4>
+                <span>Delivery Assistant</span>
                 <div class="social">
                   <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -578,19 +578,19 @@
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required="">
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="">
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="4" placeholder="Message" required=""></textarea>
+                  <textarea class="form-control" name="message" id="message" rows="4" placeholder="Message" required=""></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
@@ -703,6 +703,46 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+
+
+    <script>
+  // submit contact form
+
+  $('#contactForm').submit(function (e) {
+    e.preventDefault();
+    var name = $('#name').val();
+    var email = $('#email').val();
+    var subject = $('#subject').val();
+    var message = $('#message').val();
+    $.ajax({
+      url: "https://alav57329l.execute-api.us-west-2.amazonaws.com",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      type: "POST",
+      data: JSON.stringify({
+        toEmail: "mamunrashid57@gmail.com",
+        emailSubject: "Message received from Maxcrete website on: "+ new Date().toLocaleString("en-IN"),
+        emailBody: getMessageBody(name, email, subject, message),
+        emailFrom: "Maxgroup Contact <contact@ssexpressbd.net>"
+      }),
+      success: function (response) {
+        console.log(response);
+        $('#contactForm')[0].reset();
+        alert("Your email has been sent to appropriate authority.");
+      },
+      error: function (err) {
+        console.log(err);
+        alert("Network or server error. Please try again later.");
+      }
+    });
+    alert("Loading...");
+  });
+
+  function getMessageBody(senderName, senderEmail, messageSubject, messageBody) {
+    return eval("`<table width='100%' cellspacing='0' cellpadding='0'><tr><td align='center' style='background-size: cover;background-image: url(http://maxgroup-bd.com/images/email_bg.jpg);padding-bottom:40px;'><table width='600' cellspacing='0' cellpadding='0'><tr><td style='padding: 40px 0; text-align: center;'><img src='http://maxgroup-bd.com/images/email_logo.png' alt='Site Logo' width='150'></td></tr><tr><td style='padding: 20px 40px; background-color: #ffffff; text-align: left;'><h1>A new message received!</h1><p>Dear Sir,</p><p>Someone has left a contact message through <a href='http://maxgroup-bd.com/'>Maxgroup Official website</a></p><p>The content of the message is as follows:</p><ul><li><b>Sender name:</b>${senderName}</li><li><b>Sender email:</b>${senderEmail}</li><li><b>Message subject:</b>${messageSubject}</li><li><b>Message body:</b><br />${messageBody}</li></ul><p>If you have any questions or need assistance, feel free to contact our support team.</p><p>Best regards,</p><p>NYK Advance Limited</p></td></tr><tr><td style='padding: 20px 40px; background-color: #f4f4f4; text-align: center;'><p>If you wish to unsubscribe from these emails, call <a href='tel:01966662872' style='color: #0077cc; text-decoration: none;'>01966662872</a></p></td></tr></table></td></tr></table>`");
+  }
+</script>
 
   </body>
 
