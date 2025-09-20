@@ -54,7 +54,7 @@
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+          <li><a href="#portfolio">Licenses & Registrations</a></li>
           <li><a href="#team">Team</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -379,6 +379,43 @@
 
     </section><!-- /Testimonials Section -->
 
+
+    <section id="portfolio" class="gallery-section">
+      <h2 class="mb-5">Licenses & Registrations</h2>
+
+      <!-- Image gallery -->
+      <div class="gallery">
+        <!-- All Images (will show in one lightbox group) -->
+        <div class="category-all">
+          <!-- All images will be shown in this lightbox group -->
+          <a href="assets/img/certificate/big_verstion.png" data-fslightbox="all" data-title="Category 1 - Image 1">
+            <img src="assets/img/certificate/small_verstion.png" alt="Image 1">
+          </a>
+          <a href="https://placehold.co/600x400/000000/FFF" data-fslightbox="all" data-title="Category 1 - Image 2">
+            <img src="https://placehold.co/600x400/000000/FFF" alt="Image 2">
+          </a>
+          <a href="https://placehold.co/600x400/000000/FF0" data-fslightbox="all" data-title="Category 2 - Image 1">
+            <img src="https://placehold.co/600x400/000000/FF0" alt="Image 3">
+          </a>
+          <a href="https://placehold.co/600x400/000000/FF0" data-fslightbox="all" data-title="Category 2 - Image 2">
+            <img src="https://placehold.co/600x400/000000/FF0" alt="Image 4">
+          </a>
+          <a href="https://placehold.co/600x400/000000/F00" data-fslightbox="all" data-title="Category 3 - Image 1">
+            <img src="https://placehold.co/600x400/000000/F00" alt="Image 5">
+          </a>
+          <a href="https://placehold.co/600x400/000000/F00" data-fslightbox="all" data-title="Category 3 - Image 2">
+            <img src="https://placehold.co/600x400/000000/F00" alt="Image 6">
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+
     <!-- Team Section -->
     <section id="team" class="team section light-background">
 
@@ -426,7 +463,7 @@
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
-              <div class="pic"><img src="assets/img/team/team_profile.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/img/team/team_6.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Rima Akter</h4>
                 <span>Manager Accounts</span>
@@ -677,73 +714,79 @@
         </div>
         <div class="col-md-6 text-right">
           <div class="credits"> Designed by <a target="_blank" href="https://devwebsbd.com">Devwebsbd</a> </div>
-      </div>
         </div>
       </div>
-      
-      
-
-    </footer>
-
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-    <!-- Preloader -->
-    <div id="preloader"></div>
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+    </div>
 
 
-    <script>
-  // submit contact form
 
-  $('#contactForm').submit(function (e) {
-    e.preventDefault();
-    var name = $('#name').val();
-    var email = $('#email').val();
-    var subject = $('#subject').val();
-    var message = $('#message').val();
-    $.ajax({
-      url: "https://alav57329l.execute-api.us-west-2.amazonaws.com",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      type: "POST",
-      data: JSON.stringify({
-        toEmail: "mamunrashid57@gmail.com",
-        emailSubject: "Message received from Maxcrete website on: "+ new Date().toLocaleString("en-IN"),
-        emailBody: getMessageBody(name, email, subject, message),
-        emailFrom: "Maxgroup Contact <contact@ssexpressbd.net>"
-      }),
-      success: function (response) {
-        console.log(response);
-        $('#contactForm')[0].reset();
-        alert("Your email has been sent to appropriate authority.");
-      },
-      error: function (err) {
-        console.log(err);
-        alert("Network or server error. Please try again later.");
-      }
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/js/index.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+  <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll('.tabs button');
+    const galleries = document.querySelectorAll('.gallery div');
+
+        // Show all images by default
+    document.querySelector('.category-all').style.display = 'block';
+    document.querySelectorAll('.gallery div:not(.category-all)').forEach(div => {
+      div.style.display = 'none';
     });
-    alert("Loading...");
-  });
 
-  function getMessageBody(senderName, senderEmail, messageSubject, messageBody) {
-    return eval("`<table width='100%' cellspacing='0' cellpadding='0'><tr><td align='center' style='background-size: cover;background-image: url(http://maxgroup-bd.com/images/email_bg.jpg);padding-bottom:40px;'><table width='600' cellspacing='0' cellpadding='0'><tr><td style='padding: 40px 0; text-align: center;'><img src='http://maxgroup-bd.com/images/email_logo.png' alt='Site Logo' width='150'></td></tr><tr><td style='padding: 20px 40px; background-color: #ffffff; text-align: left;'><h1>A new message received!</h1><p>Dear Sir,</p><p>Someone has left a contact message through <a href='http://maxgroup-bd.com/'>Maxgroup Official website</a></p><p>The content of the message is as follows:</p><ul><li><b>Sender name:</b>${senderName}</li><li><b>Sender email:</b>${senderEmail}</li><li><b>Message subject:</b>${messageSubject}</li><li><b>Message body:</b><br />${messageBody}</li></ul><p>If you have any questions or need assistance, feel free to contact our support team.</p><p>Best regards,</p><p>NYK Advance Limited</p></td></tr><tr><td style='padding: 20px 40px; background-color: #f4f4f4; text-align: center;'><p>If you wish to unsubscribe from these emails, call <a href='tel:01966662872' style='color: #0077cc; text-decoration: none;'>01966662872</a></p></td></tr></table></td></tr></table>`");
-  }
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function () {
+                // Remove active class from all tabs
+        tabs.forEach(button => button.classList.remove('active'));
+
+                // Add active class to clicked tab
+        this.classList.add('active');
+
+                // Get the filter category from clicked tab
+        const filter = this.getAttribute('data-filter');
+
+                // Show/Hide gallery divs based on filter
+        if (filter === 'all') {
+          document.querySelector('.category-all').style.display = 'block';
+          document.querySelectorAll('.gallery div:not(.category-all)').forEach(div => {
+            div.style.display = 'none';
+          });
+        } else {
+          document.querySelector('.category-all').style.display = 'none';
+          galleries.forEach(gallery => {
+            if (gallery.classList.contains(filter)) {
+                            gallery.style.display = 'block'; // Show matched category
+                          } else {
+                            gallery.style.display = 'none'; // Hide non-matched category
+                          }
+                        });
+        }
+      });
+    });
+  });
 </script>
 
-  </body>
 
-  </html>
+</body>
+
+</html>
